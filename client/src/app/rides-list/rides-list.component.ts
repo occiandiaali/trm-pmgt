@@ -49,9 +49,12 @@ export class RidesListComponent implements OnInit {
   }
   
   deleteRide(id: string): void {
-    this.ridesService.deleteRide(id).subscribe({
-      next: () => this.fetchRides()
-    });
+    if (window.confirm("Are you sure you want to delete this? \n This action cannot be undone.")) {
+      this.ridesService.deleteRide(id).subscribe({
+        next: () => this.fetchRides()
+      });
+    }
+    return;
   }
   
   private fetchRides(): void {

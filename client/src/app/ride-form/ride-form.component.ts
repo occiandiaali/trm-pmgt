@@ -49,7 +49,7 @@ import { Ride } from '../ride';
 
 <div class="form-floating mb-3">
 <input class="form-control" type="text" id="cost" formControlName="cost" placeholder="Cost" required>
-<label for="cost">Cost/Day</label>
+<label for="cost">Cost per day</label>
 </div>
 
 <div *ngIf="cost.invalid && (cost.dirty || cost.touched)" class="alert alert-danger">
@@ -59,6 +59,7 @@ import { Ride } from '../ride';
 </div>
 
   <div class="mb-3">
+   <h4>Is Ride available?</h4>
     <div class="form-check">
       <input class="form-check-input" type="radio" formControlName="available" name="available" id="available-yes" value="yes" required>
       <label class="form-check-label" for="available-yes">Yes</label>
@@ -70,6 +71,7 @@ import { Ride } from '../ride';
   </div>
 
   <button class="btn btn-primary" type="submit" [disabled]="rideForm.invalid">Add</button>
+  <button class="btn btn-warning ms-4" [routerLink]="['']">Back</button>
 </form>
   `,
   styles: [
