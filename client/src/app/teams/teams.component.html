@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <div *ngFor="let t of teams" id="team-div" class="content-center m-2">{{t}}</div>
+    <!-- <div id="create-div" class="content-center">
+        <h1 class="text-5xl text-center">+</h1>
+    </div> -->
+    <div id="create-div"
+        class="text-xl bg-purple-200 text-red-900 w-14 h-14 flex justify-center items-center rounded-full mb-6 mx-auto">
+        <i class="fa-solid fa-plus" aria-hidden="true"></i>
+    </div>
+</div>

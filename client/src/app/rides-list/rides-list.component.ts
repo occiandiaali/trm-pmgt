@@ -6,7 +6,7 @@ import { RideService } from '../ride.service';
 @Component({
   selector: 'app-rides-list',
   template: `
-  <h2 class="text-center m-5">Ride Rentals</h2>
+  <h2 class="text-3xl">Ride Rentals</h2>
  
   <table class="table table-striped table-bordered">
       <thead>
@@ -41,13 +41,13 @@ import { RideService } from '../ride.service';
 })
 export class RidesListComponent implements OnInit {
   rides$: Observable<Ride[]> = new Observable();
- 
+
   constructor(private ridesService: RideService) { }
-  
+
   ngOnInit(): void {
     this.fetchRides();
   }
-  
+
   deleteRide(id: string): void {
     if (window.confirm("Are you sure you want to delete this? \n This action cannot be undone.")) {
       this.ridesService.deleteRide(id).subscribe({
@@ -56,7 +56,7 @@ export class RidesListComponent implements OnInit {
     }
     return;
   }
-  
+
   private fetchRides(): void {
     this.rides$ = this.ridesService.getRides();
   }
