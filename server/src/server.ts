@@ -2,7 +2,7 @@ import * as dotenv from "dotenv";
 import cors from "cors";
 import express from "express";
 import { connectToDatabase } from "./database";
-import { rideRouter } from "./ride.routes";
+//import { rideRouter } from "./ride.routes";
 import { teamsRouter } from "./teams.routes";
 
 // Load environment variables from the .env file, where the ATLAS_URI is configured

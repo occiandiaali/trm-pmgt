@@ -23,6 +23,28 @@ export async function connectToDatabase(uri: string) {
 // Update our existing collection with JSON schema validation so we know our documents will always match the shape of our Employee model, even if added elsewhere.
 // For more information about schema validation, see this blog series: https://www.mongodb.com/blog/post/json-schema-validation--locking-down-your-model-the-smart-way
 async function applySchemaValidation(db: mongodb.Db) {
+    const teamSchema = {
+        $teamSchema: {
+            bsonType: "object",
+            required: ["name"],
+            additionalProperties: false,
+            properties: {
+                _id: {},
+                name: {
+                    bsonType: "string",
+                    description: "'name' is required and is a string",
+                },
+                members: {
+                    bsonType: "array",
+                    description: "'members' is a string array",
+                },
+                projects: {
+                    bsonType: "array",
+                    description: "'projects' is an array",
+                },
+            },
+        },
+    };
     const jsonSchema = {
         $jsonSchema: {
             bsonType: "object",
@@ -59,11 +81,14 @@ async function applySchemaValidation(db: mongodb.Db) {
 
     // Try applying the modification to the collection, if the collection doesn't exist, create it
     await db.command({
-        collMod: "rides",
-        validator: jsonSchema
+        // collMod: "rides",
+        // validator: jsonSchema
+        collMod: "teams",
+        validator: teamSchema
     }).catch(async (error: mongodb.MongoServerError) => {
         if (error.codeName === 'NamespaceNotFound') {
-            await db.createCollection("rides", { validator: jsonSchema });
+            // await db.createCollection("rides", { validator: jsonSchema });
+            await db.createCollection("teams", { validator: teamSchema });
         }
     });
 }
