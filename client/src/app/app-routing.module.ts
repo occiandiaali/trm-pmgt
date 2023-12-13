@@ -7,6 +7,7 @@ import { TeamsComponent } from './teams/teams.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { MembersComponent } from './members/members.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddTeamComponent } from './teams/add-team.component';
 
 const routes: Routes = [
   // {path: '', redirectTo: 'rides', pathMatch: 'full'},
@@ -15,6 +16,7 @@ const routes: Routes = [
   // {path: 'rides/edit/:id', component: EditRideComponent}
   { path: '', redirectTo: '/teams', pathMatch: 'full' },
   { path: 'teams', component: TeamsComponent },
+  { path: 'teams/new', component: AddTeamComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'members', component: MembersComponent },
   { path: "**", component: NotFoundComponent }

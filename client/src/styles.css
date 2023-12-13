@@ -8,6 +8,7 @@
 }
 
 body {
+    background-color: tan;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -21,6 +22,7 @@ body {
 
 app-nav,
 app-teams,
+app-add-team,
 app-projects,
 app-members,
 app-not-found {
@@ -36,6 +38,7 @@ app-nav {
 }
 
 app-teams,
+app-add-team,
 app-projects,
 app-members,
 app-not-found {
