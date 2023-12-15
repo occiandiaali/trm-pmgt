@@ -21,6 +21,7 @@ body {
 }
 
 app-nav,
+app-top-bar,
 app-teams,
 app-add-team,
 app-projects,
@@ -38,6 +39,7 @@ app-nav {
 }
 
 app-teams,
+app-top-bar,
 app-add-team,
 app-projects,
 app-members,
@@ -51,5 +53,9 @@ app-not-found {
     app-nav {
         flex: unset;
         width: 100%;
+    }
+
+    app-top-bar {
+        display: none;
     }
 }

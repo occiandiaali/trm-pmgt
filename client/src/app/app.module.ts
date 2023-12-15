@@ -12,6 +12,7 @@ import { EditRideComponent } from './edit-ride/edit-ride.component';
 import { TeamsComponent } from './teams/teams.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { MembersComponent } from './members/members.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 import { NavComponent } from './nav/nav.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -31,6 +32,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     TeamsComponent,
     ProjectsComponent,
     MembersComponent,
+    TopBarComponent,
     NotFoundComponent,
     NavComponent
   ],

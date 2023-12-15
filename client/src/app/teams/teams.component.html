@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
     <!-- <div *ngFor="let t of teams" id="team-div" class="content-center m-2">{{t}}</div> -->
-    <div *ngFor="let team of teams$ | async" id="team-div" class="content-center m-2">{{team}}</div>
+    <div *ngFor="let team of teams$ | async" id="team-div" class="content-center m-2">
+        <h1 class="font-semibold my-4">{{team.name}}</h1>
+    </div>
     <!-- <div id="create-div" class="content-center">
         <h1 class="text-5xl text-center">+</h1>
     </div> -->
