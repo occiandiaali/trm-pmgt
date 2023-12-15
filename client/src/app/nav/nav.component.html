@@ -1,4 +1,6 @@
-<div class="mt-6 mb-4">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<div class="mt-2 mb-4">
     <figure class="max-w-lg">
         <img class="h-48 w-48 rounded-lg"
             src="https://images.pexels.com/photos/34534/people-peoples-homeless-male.jpg?auto=compress&cs=tinysrgb&w=400"
@@ -8,10 +10,15 @@
 </div>
 <nav>
     <ul class="max-w-md divide-y divide-gray-200 dark:divide-gray-700">
-        <li class="pb-3 pt-3 sm:pb-4"><a routerLink="/teams">Teams</a></li>
-        <li class="pb-3 pt-3 sm:pb-4"><a routerLink="/projects">Projects</a></li>
-        <li class="pb-3 pt-3 sm:pb-4"><a routerLink="/members">Members</a></li>
+        <li class="pb-3 pt-3 sm:pb-4"><i class="fa-solid fa-building mr-4" aria-hidden="true" routerLink="new"
+                id="fa-building"></i><a routerLink="/teams">Teams</a></li>
+        <li class="pb-3 pt-3 sm:pb-4"><i class="fa-solid fa-tasks mr-4" aria-hidden="true" routerLink="new"
+                id="fa-tasks"></i><a routerLink="/projects">Projects</a></li>
+        <li class="pb-3 pt-3 sm:pb-4"><i class="fa-solid fa-users mr-4" aria-hidden="true" routerLink="new"
+                id="fa-users"></i><a routerLink="/members">Members</a></li>
         <li class="pb-3 pt-3 sm:pb-4"><a routerLink="#">FAQs</a></li>
+        <li class="pb-3 pt-3 sm:pb-4"><i class="fa-solid fa-sign-out mr-4" aria-hidden="true" routerLink="new"
+                id="fa-sign-out"></i><a routerLink="#">Sign Out</a></li>
         <!-- <li><a routerLink="/home">Home</a></li>
         <li><a routerLink="/faqs">FAQs</a></li> -->
     </ul>
