@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: tan;
+    background-color: rgb(243, 240, 237);
     margin: 0;
     padding: 0;
     text-align: center;
@@ -39,7 +39,6 @@ app-nav {
 }
 
 app-teams,
-app-top-bar,
 app-add-team,
 app-projects,
 app-members,
