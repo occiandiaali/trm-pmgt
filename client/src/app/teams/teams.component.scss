@@ -3,18 +3,23 @@
     height: 300px;
     gap: 2;
     text-align: center;
-    background-color: tomato;
+    background-color: rgb(206, 133, 121);
     border-radius: 12px;
 }
 
 #create-div {
     width: 250px;
-    height: 300px;
+    height: 200px;
+    margin-top: 12px;
     gap: 2;
     align-items: center;
     background-color: rgb(233, 229, 229);
     border: 1px solid rgb(201, 198, 198);
     border-radius: 12px;
+}
+
+#fa-plus-icon {
+    padding-right: 6px;
 }
 
 #fa-plus-icon:hover {
