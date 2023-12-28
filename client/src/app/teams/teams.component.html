@@ -3,7 +3,21 @@
 <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
     <!-- <div *ngFor="let t of teams" id="team-div" class="content-center m-2">{{t}}</div> -->
     <div *ngFor="let team of teams$ | async" id="team-div" class="relative content-center m-2">
-        <h1 class="font-semibold my-14">{{team.name}}</h1>
+        <h1 class="font-semibold my-2">{{team.name}}</h1>
+        <p class="text-sm">{{team.description}}</p>
+        <div *ngIf="projects.length; else noProject" id="teamProjectsDiv">
+            <h3>Team Projects</h3>
+            <div id="projectsDiv">
+                <div id="projectPlaceholderDiv">Project 1</div>
+                <div id="projectPlaceholderDiv">Project 2</div>
+            </div>
+        </div>
+        <ng-template #noProject>
+            <div class="mt-14">
+                <i class="fa-solid fa-plus" aria-hidden="true" routerLink="new" id="fa-plus-icon"></i>
+                <span class="text-lg text-slate-800">Create Project</span>
+            </div>
+        </ng-template>
         <div class="absolute bottom-6 left-0 grid grid-rows-1 grid-flow-col gap-0 pl-2 pr-16">
             <img src="https://images.pexels.com/photos/17516645/pexels-photo-17516645/free-photo-of-smiling-couple-hugging-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
                 alt="image" class="w-6 h-6 rounded-full">
@@ -19,10 +33,11 @@
                 alt="image" class="w-6 h-6 rounded-full">
         </div>
         <div class="absolute bottom-1 left-2">
-            <p class="text-sm">22-12-2023</p>
+            <p class="text-sm">{{today.toLocaleString()}}</p>
         </div>
         <div class="absolute bottom-3 right-2">
-            <i class="fa fa-trash right-8" aria-hidden="true" routerLink="new" id="fa-trash-icon"></i>
+            <i class="fa fa-trash right-8" aria-hidden="true" (click)="deleteTeam(team._id || '')"
+                id="fa-trash-icon"></i>
         </div>
     </div>
     <!-- <div id="create-div" class="content-center">

@@ -1,6 +1,6 @@
 #team-div {
     width: 250px;
-    height: 300px;
+    height: 260px;
     gap: 2;
     text-align: center;
     background-color: rgb(206, 133, 121);
@@ -24,4 +24,29 @@
 
 #fa-plus-icon:hover {
     cursor: pointer;
+}
+
+#fa-trash-icon:hover {
+    cursor: pointer;
+}
+
+#projectsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4px;
+}
+
+#projectPlaceholderDiv {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    background-color: aliceblue;
+}
+
+#teamProjectsDiv {
+    width: 100%;
+    padding: 6px;
+    margin: 4px;
 }

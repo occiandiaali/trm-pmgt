@@ -34,6 +34,10 @@ async function applySchemaValidation(db: mongodb.Db) {
                     bsonType: "string",
                     description: "'name' is required and is a string",
                 },
+                description: {
+                    bsonType: "string",
+                    description: "'description' is a string",
+                },
                 members: {
                     bsonType: "array",
                     description: "'members' is a string array",
