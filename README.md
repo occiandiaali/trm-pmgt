@@ -2,7 +2,10 @@
 MEAN stack CRUD app    
 
 ## Screencast  
-[trm-desktop-teams.webm](https://github.com/occiandiaali/trm-pmgt/assets/40769994/0894a4bf-3340-49a6-bd63-70853f3adbc0)
+
+[trm-create-team.webm](https://github.com/occiandiaali/trm-pmgt/assets/40769994/1a343927-2d1f-44fa-b267-4f7ccc443093)  
+
+[trm-delete-team.webm](https://github.com/occiandiaali/trm-pmgt/assets/40769994/818a2872-4f12-4cfb-9fa1-bdd1d93bc5a9)
 
 
 [trm-responsive.webm](https://github.com/occiandiaali/trm-pmgt/assets/40769994/4d6c6d70-b7ec-48ff-9048-85eb2ec7e99b)
