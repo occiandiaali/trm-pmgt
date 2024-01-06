@@ -14,10 +14,11 @@
         </div>
         <ng-template #noProject>
             <div class="mt-14">
-                <i class="fa-solid fa-plus" aria-hidden="true" routerLink="new" id="fa-plus-icon"></i>
+                <i class="fa-solid fa-plus" (click)="openDialog()" aria-hidden="true" id="fa-plus-icon"></i>
                 <span class="text-lg text-slate-800">Create Project</span>
             </div>
         </ng-template>
+
         <div class="absolute bottom-6 left-0 grid grid-rows-1 grid-flow-col gap-0 pl-2 pr-16">
             <img src="https://images.pexels.com/photos/17516645/pexels-photo-17516645/free-photo-of-smiling-couple-hugging-on-sea-shore.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
                 alt="image" class="w-6 h-6 rounded-full">
