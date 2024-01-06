@@ -15,6 +15,7 @@ import { MembersComponent } from './members/members.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { NavComponent } from './nav/nav.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MembersComponent,
     TopBarComponent,
     NotFoundComponent,
-    NavComponent
+    NavComponent,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
